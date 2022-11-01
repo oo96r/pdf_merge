@@ -117,6 +117,3 @@ st.download_button(
     label="Download",
     data = bs,
     mime='application/pdf')
-
-#cd C:\Users\kylab\Documents\MyFolder\その他\制作物\2_PDFmerge
-#streamlit run app.py    
