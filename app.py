@@ -113,7 +113,8 @@ for i in range(pages_num):
 bs = io.BytesIO()
 pdf_output.write(bs)
 
-st.download_button(
-    label="Download",
-    data = bs,
-    mime='application/pdf')
+if uploaded_file:
+    st.download_button(
+        label="Download",
+        data = bs,
+        mime='application/pdf')
