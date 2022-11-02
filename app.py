@@ -10,7 +10,7 @@ from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.lib.units import mm
 
 
-st.title('PDF mearge')
+st.title('PDF merge')
 st.write("複数のpdfを結合して、ページ番号を付けられます！")
 
 #file upload
