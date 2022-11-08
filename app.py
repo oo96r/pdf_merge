@@ -11,7 +11,7 @@ from reportlab.lib.units import mm
 
 
 st.title('PDF merge')
-st.write("複数のpdfを結合して、ページ番号を付けられます！")
+st.write("You can merge multiple pdf's and number the pages!")
 
 #file upload
 st.markdown("## file upload")
