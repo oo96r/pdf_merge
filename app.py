@@ -12,6 +12,7 @@ from reportlab.lib.units import mm
 
 st.title('PDF merge')
 st.write("You can merge multiple pdf's and number the pages!")
+st.write("github: https://github.com/oo96r/pdf_merge")
 
 #file upload
 st.markdown("## file upload")
