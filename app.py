@@ -62,7 +62,7 @@ if pageNo_button:
 
 
 #mearge pdf
-pdf_merged = PyPDF2.PdfFileMerger()
+pdf_merged = PyPDF2.PdfFileMerger(strict=False)
 for f in file_order:
     pdf_merged.append(files[f])
     
