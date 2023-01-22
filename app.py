@@ -10,12 +10,11 @@ from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.lib.units import mm
 
 
-st.title('PDF merge')
-st.write("You can merge multiple pdf's and number the pages!")
+st.title("PDFの結合・ページ番号追加")
 st.write("github: https://github.com/oo96r/pdf_merge")
 
 #file upload
-st.markdown("## file upload")
+#st.markdown("## file upload")
 uploaded_file = []
 uploaded_file = st.file_uploader(
     "Upload pdf file",
@@ -24,13 +23,14 @@ uploaded_file = st.file_uploader(
 
 
 #merge setting
-st.markdown("### setting - merge")
+st.markdown("### 設定")
 files = {f.name: f for f in uploaded_file}
 
-help_txt  = "Select the files you wish to combine in order."
-help_txt += " If you do not select anything, all files will be combined in order of name."
+help_txt  = "選択されたファイルのみが選択された順番に結合されます。"
+help_txt += "何も選択しない場合、アップロードされた全ファイルがファイル名順に結合されます。"
 
-file_order = st.multiselect("select merge file",
+
+file_order = st.multiselect("結合ファイルの順番を選択",
                             options = files.keys(),
                             help = help_txt,
                             default = None)
@@ -39,7 +39,7 @@ if file_order==[]:
     file_order = sorted(files.keys())  
 
 
-#page no. setting
+#page No. setting
 st.markdown("### setting - page No.")
 pageNo_button = st.checkbox("add page No.")
 if pageNo_button:
@@ -59,6 +59,7 @@ if pageNo_button:
     pdfmetrics.registerFont(UnicodeCIDFont(font))
     loc_bottom *= mm
     
+
 
 #mearge pdf
 pdf_merged = PyPDF2.PdfFileMerger()
