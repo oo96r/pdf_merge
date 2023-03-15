@@ -10,8 +10,8 @@ from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.lib.units import mm
 
 
-st.title("PDFの結合・ページ番号追加")
-st.write("github: https://github.com/oo96r/pdf_merge")
+st.title("PDF Merge")
+st.write("cord: https://github.com/oo96r/pdf_merge")
 
 #file upload
 #st.markdown("## file upload")
@@ -23,14 +23,13 @@ uploaded_file = st.file_uploader(
 
 
 #merge setting
-st.markdown("### 設定")
+st.markdown("### setting")
 files = {f.name: f for f in uploaded_file}
 
-help_txt  = "選択されたファイルのみが選択された順番に結合されます。"
-help_txt += "何も選択しない場合、アップロードされた全ファイルがファイル名順に結合されます。"
+help_txt  = "The selected files will be combined in order."
+help_txt += "If nothing is selected, all uploaded files will be combined in order of file name."
 
-
-file_order = st.multiselect("結合ファイルの順番を選択",
+file_order = st.multiselect("Select the order of file merging",
                             options = files.keys(),
                             help = help_txt,
                             default = None)
