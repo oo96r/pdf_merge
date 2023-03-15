@@ -17,7 +17,7 @@ You can specify the order in which files will be combined. Files not selected wi
 
 ### setting - page No.
 
-If you check the checkbox, you can put page numbers at the bottom of the page.
+If the check box is checked, the page number will be placed at the bottom of the page.
 
 #### prefix, suffix
 
