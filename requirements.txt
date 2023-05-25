@@ -1,2 +1,2 @@
 PyPDF2==2.12.*
-reportlab
+reportlab==3.6.12
